@@ -7,14 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controller;
 
 namespace View
 {
     public partial class Register : Form
     {
-        public Register()
+        private PrincipalMenu principalMenu;
+        public Register(PrincipalMenu principalMenu)
         {
             InitializeComponent();
+            this.principalMenu = principalMenu;
+        }
+
+        private void ExitForm(object sender, FormClosedEventArgs e)
+        {
+            ExitForm();
+        }
+
+        private void ExitForm()
+        {
+            Hide();
+            principalMenu.Show();
+        }
+
+        private void CancelForm(object sender, EventArgs e)
+        {
+            ExitForm();
+        }
+
+        private void RegisterNewClient(object sender, EventArgs e)
+        {
+            Console.WriteLine(FormUtils.DateToString(dtp_nacimDate.Value));
         }
     }
 }

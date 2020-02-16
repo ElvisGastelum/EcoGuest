@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Controller
@@ -26,6 +28,19 @@ namespace Controller
         {
             return form.Controls.OfType<TextBox>().Any(x => x.Tag.ToString() == "Required"
                                                             && string.IsNullOrEmpty(x.Text));
+        }
+
+        public static string DateToString(DateTime dateTime)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat("{0} / {1} / {2}", 
+                dateTime.Day.ToString(), 
+                dateTime.Month.ToString(),
+                dateTime.Year.ToString()
+            );
+                
+            return sb.ToString();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace View
     {
         private Login login;
         private string adminUsername;
+        private Register register;
         public PrincipalMenu(Login login, string adminUsername)
         {
             InitializeComponent();
@@ -42,6 +43,13 @@ namespace View
         private void PrincipalMenu_Load(object sender, EventArgs e)
         {
             lbl_bienvenida.Text = "Bienvenid(o / a), " + adminUsername;
+        }
+
+        private void NewGuest(object sender, EventArgs e)
+        {
+            register = new Register(this);
+            Hide();
+            register.Show();
         }
     }
 }

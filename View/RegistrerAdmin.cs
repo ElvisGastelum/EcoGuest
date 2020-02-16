@@ -22,7 +22,7 @@ namespace View
             this.principalMenu = principalMenu;
         }
 
-        private void Registrer(object sender, EventArgs e)
+        private void Register(object sender, EventArgs e)
         {
             if (FormUtils.IsRequiredFieldsValid(this))
                 MessageBox.Show(
@@ -30,10 +30,10 @@ namespace View
                     "Campos obligatorios"
                 );
             else
-                RegistrerNewAdmin();
+                RegisterNewAdmin();
         }
 
-        private void RegistrerNewAdmin()
+        private void RegisterNewAdmin()
         {
             bool returnSaveAdminCode = registerAdmin.SaveAdmin(
                 txt_usuario.Text,

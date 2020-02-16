@@ -39,6 +39,7 @@
             this.btn_nuevoAdmin = new System.Windows.Forms.Button();
             this.btn_cerrarSesion = new System.Windows.Forms.Button();
             this.lbl_bienvenida = new System.Windows.Forms.Label();
+            this.btn_nuevoHuesped = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -124,7 +125,7 @@
             // 
             // btn_cerrarSesion
             // 
-            this.btn_cerrarSesion.Location = new System.Drawing.Point(380, 55);
+            this.btn_cerrarSesion.Location = new System.Drawing.Point(489, 299);
             this.btn_cerrarSesion.Name = "btn_cerrarSesion";
             this.btn_cerrarSesion.Size = new System.Drawing.Size(103, 23);
             this.btn_cerrarSesion.TabIndex = 21;
@@ -140,9 +141,19 @@
             this.lbl_bienvenida.Image = ((System.Drawing.Image)(resources.GetObject("lbl_bienvenida.Image")));
             this.lbl_bienvenida.Location = new System.Drawing.Point(259, 9);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
-            this.lbl_bienvenida.Size = new System.Drawing.Size(175, 33);
+            this.lbl_bienvenida.Size = new System.Drawing.Size(159, 33);
             this.lbl_bienvenida.TabIndex = 23;
-            this.lbl_bienvenida.Text = "Bienvenido, ";
+            this.lbl_bienvenida.Text = "Bienvenido";
+            // 
+            // btn_nuevoHuesped
+            // 
+            this.btn_nuevoHuesped.Location = new System.Drawing.Point(371, 55);
+            this.btn_nuevoHuesped.Name = "btn_nuevoHuesped";
+            this.btn_nuevoHuesped.Size = new System.Drawing.Size(112, 23);
+            this.btn_nuevoHuesped.TabIndex = 24;
+            this.btn_nuevoHuesped.Text = "NUEVO HUÉSPED";
+            this.btn_nuevoHuesped.UseVisualStyleBackColor = true;
+            this.btn_nuevoHuesped.Click += new System.EventHandler(this.NewGuest);
             // 
             // PrincipalMenu
             // 
@@ -150,6 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(596, 345);
+            this.Controls.Add(this.btn_nuevoHuesped);
             this.Controls.Add(this.lbl_bienvenida);
             this.Controls.Add(this.btn_cerrarSesion);
             this.Controls.Add(this.btn_nuevoAdmin);
@@ -186,6 +198,7 @@
         private System.Windows.Forms.Button btn_nuevoAdmin;
         private System.Windows.Forms.Button btn_cerrarSesion;
         private System.Windows.Forms.Label lbl_bienvenida;
+        private System.Windows.Forms.Button btn_nuevoHuesped;
     }
 }
 
