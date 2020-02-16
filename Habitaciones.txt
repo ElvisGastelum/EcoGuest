@@ -1,0 +1,12 @@
+Suite:
+La habitación ofrece más espacio, contando con una sala/oficina y comedor/cocina de adición extra, su correspondiente cama king size, baño con tina y una hermosa vista propia.
+
+Doble:
+La habitación doble cuenta con dos camas matrimoniales, una pequeña area de oficina/comedor y un baño estandar.
+
+Senciclla:
+La habitación sencilla cuenta con una cama matrimonial, una pequeña area oficina/comedo y un baño estandar.
+
+
+Nota: el hotel ofrece desayuno gratis entre-semana, wifi y tv en todas las habitaciones. 
+  

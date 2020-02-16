@@ -1,0 +1,33 @@
+Manual de usuario.
+
+1.
+Para empezar se seleccionara la app para abrir, una vez ya inciada se abrira la pantalla del menu junto con un cuadro pequeño para el login, iniciar sesión con su usuario y contraseña, con esto no se prodra ingresar al menu hasta que se haya iniciado sesion un empleado encargado del sistema; una vez ya dentro aparecera el menu libre para su uso, se veran 3 botones que dicen "Reservar", "Habitaciones" y "Huespedes". 
+
+2.
+El boton de "Reservar" te llevará al apartado donde se podran hacer las reservaciones, ahí se ingresaran los datos principales, para elegir la habitación indicada pulsar el botono "Habitaciones" para ver los cuartos disponibles y elegir la deseada. Después de llenar todos los requerimientos se dará click en un siguiente boton que se llama "Siguiente" para ir al apartado de los datos del cliente y realización del pago. Para finalizar pulsar el boton que dice "Registrar".
+
+3.
+En el boton de "Habitaciones" apareceran todas las habitaciones y sus estados, ya sea libre, ocupado, reservado.
+
+4.
+En el boton de "Huesped" se encontrará un buscador en el cual aparecera una lista de los clientes que se encuentran en el hotel y aquellos que suelen visitarlo en ocasiones, dará la opcion de modificar sus datos, eliminarlos y guardarlos.
+
+
+
+Manual para elvis????
+
+estaba pensando poner el menu como container y que su hijo sea el form-login, y que el login no se cierre hasta que se haya iniciado sesion correctamente y así el menu no sea libre de uso para personas no calificadas para el puesto/uso. eso solo es una idea, si tu tienes una mejor o que te funcione a ti, todo fine.
+
+los botones de salir que te lleven al menu principal, pero que salga un messagebox en los forms en donde se ingresan datos que digan "¿desea salir sin completar los datos?" si pulsa en boton "si" que se salga y se limpien los datos, "si" pulsa en "no" cerrar message box y seguir en el mismo form. Repito si tienes otra idea, todo fine.
+
+que los botones de cancelar cumplan la funcion clear, y si quieres ponerle messagebox para asegurar si es lo que desea el usuario, todo fine, por si se equivocan y no tengan que llenar los datos de nuevo.
+
+en el form de huespedes, si crees que se puede elegir uno y encontrar sus datos en un tipo informe que se pueda modificar aunque no se como se hace eso, estaria bien, sino, quita el boton de "Modificar". el boton de eliminar eliminara los datos de un cliente (toda su tupla). 
+Y pues el boton de guardar que haga lo que dice, guardar los datos modificados en el datagrid, aunque ahora que lo pienso si usas un nuevo form para el informe, es mejor que el boton guardar este ahi.
+el botono que parece una lupa, de hecho es una lupa, que es para buscar jajajaja.
+
+Si tienes alguna duda favor de llamar o mandar mensaje. :).
+
+
+
+ 
