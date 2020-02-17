@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
+using Model;
 
 namespace View
 {
@@ -42,30 +43,45 @@ namespace View
             if (FormUtils.IsRequiredFieldsValidInGroupBox(this))
             {
                 RegisterNewClient();
-            }
-            else
-            {
-                Console.WriteLine(":(");
-            }
-            
-        }
-
-        public void RegisterNewClient()
-        {
-            if (registerController.NewClient())
-            {
-                MessageBox.Show(
-                    "Registro Exitoso",
-                    "Estado del registro"
-                );
-                ExitForm();
                 return;
             }
 
             MessageBox.Show(
-                "Registro incorrecto",
-                "Estado del registro"
+                "Favor de llenar todos los campos",
+                "Campos requeridos"
             );
+
+        }
+
+        public void RegisterNewClient()
+        {
+            Client client = new Client();
+
+            client.VIP = IsVIP();
+
+
+            registerController.NewClient(client);
+            MessageBox.Show(
+                "Registro Exitoso", 
+                "Estado del registro"
+                );
+            ExitForm();
+            
+        }
+
+        private bool IsVIP()
+        {
+            if (rbtn_vip.Checked)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            cmb_sexo.SelectedIndex = 1;
         }
     }
 }

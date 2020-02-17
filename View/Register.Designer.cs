@@ -54,8 +54,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_cardFecha = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_vip = new System.Windows.Forms.RadioButton();
+            this.rbtn_noVip = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -333,29 +333,29 @@
             this.label12.TabIndex = 80;
             this.label12.Text = "Vence hasta:";
             // 
-            // radioButton1
+            // rbtn_vip
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(225, 239);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(34, 17);
-            this.radioButton1.TabIndex = 84;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Si";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rbtn_vip.AutoSize = true;
+            this.rbtn_vip.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn_vip.Checked = true;
+            this.rbtn_vip.Location = new System.Drawing.Point(225, 239);
+            this.rbtn_vip.Name = "rbtn_vip";
+            this.rbtn_vip.Size = new System.Drawing.Size(34, 17);
+            this.rbtn_vip.TabIndex = 84;
+            this.rbtn_vip.TabStop = true;
+            this.rbtn_vip.Text = "Si";
+            this.rbtn_vip.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rbtn_noVip
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Location = new System.Drawing.Point(293, 239);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 85;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbtn_noVip.AutoSize = true;
+            this.rbtn_noVip.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn_noVip.Location = new System.Drawing.Point(293, 239);
+            this.rbtn_noVip.Name = "rbtn_noVip";
+            this.rbtn_noVip.Size = new System.Drawing.Size(39, 17);
+            this.rbtn_noVip.TabIndex = 85;
+            this.rbtn_noVip.Text = "No";
+            this.rbtn_noVip.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
@@ -379,8 +379,8 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.rbtn_noVip);
+            this.groupBox3.Controls.Add(this.rbtn_vip);
             this.groupBox3.Controls.Add(this.cmb_sexo);
             this.groupBox3.Controls.Add(this.txt_celular);
             this.groupBox3.Controls.Add(this.label5);
@@ -418,6 +418,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REGISTRO";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExitForm);
+            this.Load += new System.EventHandler(this.Register_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -454,8 +455,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_cardFecha;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbtn_vip;
+        private System.Windows.Forms.RadioButton rbtn_noVip;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
     }

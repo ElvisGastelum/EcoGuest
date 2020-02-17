@@ -5,7 +5,7 @@ using System.Text;
 namespace Model
 {
     [Serializable]
-    public abstract class Client
+    public class Client
     {
         public bool VIP { get; set; }
         public string Nombre { get; set; }
