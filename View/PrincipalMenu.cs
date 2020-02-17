@@ -15,6 +15,8 @@ namespace View
         private Login login;
         private string adminUsername;
         private Register register;
+        private Search search;
+        private Reservation reservation;
         public PrincipalMenu(Login login, string adminUsername)
         {
             InitializeComponent();
@@ -50,6 +52,21 @@ namespace View
             register = new Register(this);
             Hide();
             register.Show();
+        }
+
+        private void SearchClient(object sender, EventArgs e)
+        {
+            search = new Search(this);
+            Hide();
+            search.Show();
+        }
+
+        private void btn_reservar_Click(object sender, EventArgs e)
+        {
+            reservation = new Reservation(this);
+            Hide();
+            reservation.Show();
+
         }
     }
 }

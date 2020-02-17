@@ -84,6 +84,7 @@
             this.btn_reservar.TabIndex = 16;
             this.btn_reservar.Text = "RESERVAR";
             this.btn_reservar.UseVisualStyleBackColor = true;
+            this.btn_reservar.Click += new System.EventHandler(this.btn_reservar_Click);
             // 
             // btn_habitaciones
             // 
@@ -102,6 +103,7 @@
             this.btn_huesped.TabIndex = 18;
             this.btn_huesped.Text = "HUESPED";
             this.btn_huesped.UseVisualStyleBackColor = true;
+            this.btn_huesped.Click += new System.EventHandler(this.SearchClient);
             // 
             // pictureBox2
             // 
@@ -139,7 +141,7 @@
             this.lbl_bienvenida.BackColor = System.Drawing.Color.Transparent;
             this.lbl_bienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_bienvenida.Image = ((System.Drawing.Image)(resources.GetObject("lbl_bienvenida.Image")));
-            this.lbl_bienvenida.Location = new System.Drawing.Point(259, 9);
+            this.lbl_bienvenida.Location = new System.Drawing.Point(220, 9);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
             this.lbl_bienvenida.Size = new System.Drawing.Size(159, 33);
             this.lbl_bienvenida.TabIndex = 23;

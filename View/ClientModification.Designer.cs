@@ -2,7 +2,7 @@
 
 namespace View
 {
-    partial class Register
+    partial class ClientModification
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientModification));
             this.label1 = new System.Windows.Forms.Label();
             this.dtp_nacimDate = new System.Windows.Forms.DateTimePicker();
             this.txt_nation = new System.Windows.Forms.TextBox();
@@ -58,8 +58,8 @@ namespace View
             this.rbtn_vip = new System.Windows.Forms.RadioButton();
             this.rbtn_noVip = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmb_formaPay = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,7 +74,7 @@ namespace View
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(855, 30);
             this.label1.TabIndex = 1;
-            this.label1.Text = "REGISTRO DE HUÉSPED";
+            this.label1.Text = "MODIFICACIÓN DE HUÉSPED";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtp_nacimDate
@@ -226,9 +226,9 @@ namespace View
             this.btn_resgistrar.Name = "btn_resgistrar";
             this.btn_resgistrar.Size = new System.Drawing.Size(83, 44);
             this.btn_resgistrar.TabIndex = 73;
-            this.btn_resgistrar.Text = "Registrar";
+            this.btn_resgistrar.Text = "Modificar";
             this.btn_resgistrar.UseVisualStyleBackColor = false;
-            this.btn_resgistrar.Click += new System.EventHandler(this.RegisterNewClient);
+            this.btn_resgistrar.Click += new System.EventHandler(this.ModificationClient);
             // 
             // btn_cancelar
             // 
@@ -369,6 +369,18 @@ namespace View
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pago";
             // 
+            // cmb_formaPay
+            // 
+            this.cmb_formaPay.FormattingEnabled = true;
+            this.cmb_formaPay.Items.AddRange(new object[] {
+            "Efectivo",
+            "Credito / Debito"});
+            this.cmb_formaPay.Location = new System.Drawing.Point(168, 26);
+            this.cmb_formaPay.Name = "cmb_formaPay";
+            this.cmb_formaPay.Size = new System.Drawing.Size(204, 21);
+            this.cmb_formaPay.TabIndex = 84;
+            this.cmb_formaPay.SelectedIndexChanged += new System.EventHandler(this.FormaDePago);
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -395,19 +407,7 @@ namespace View
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos";
             // 
-            // cmb_formaPay
-            // 
-            this.cmb_formaPay.FormattingEnabled = true;
-            this.cmb_formaPay.Items.AddRange(new object[] {
-            "Efectivo",
-            "Credito / Debito"});
-            this.cmb_formaPay.Location = new System.Drawing.Point(168, 26);
-            this.cmb_formaPay.Name = "cmb_formaPay";
-            this.cmb_formaPay.Size = new System.Drawing.Size(204, 21);
-            this.cmb_formaPay.TabIndex = 84;
-            this.cmb_formaPay.SelectedIndexChanged += new System.EventHandler(this.FormaDePago);
-            // 
-            // Register
+            // ClientModification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -420,7 +420,7 @@ namespace View
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
-            this.Name = "Register";
+            this.Name = "ClientModification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REGISTRO";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExitForm);

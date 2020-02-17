@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EcoGuest.Properties {
+namespace View.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

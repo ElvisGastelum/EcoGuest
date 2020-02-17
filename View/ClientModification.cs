@@ -12,17 +12,69 @@ using Model;
 
 namespace View
 {
-    public partial class Register : Form
+    public partial class ClientModification : Form
     {
-        private RegisterController registerController = new RegisterController();
-        private PrincipalMenu principalMenu;
-        public Register(PrincipalMenu principalMenu)
+        private ClientModificationController clientModificationController = new ClientModificationController();
+        private Search search;
+        private BindingList<Client> list;
+        private int index;
+        private Client client;
+
+        public ClientModification(Search search, Client client, BindingList<Client> list, int index)
         {
             InitializeComponent();
-            this.principalMenu = principalMenu;
+            this.search = search;
+            this.list = list;
+            this.index = index;
+            this.client = client;
+            RefillFields();
         }
 
-        
+        private void RefillFields()
+        {
+            txt_noTarjeta.Text = client.NumeroDeTarjeta.ToString();
+            txt_celular.Text = client.Celular.ToString();
+            txt_cvc.Text = client.CVC;
+            txt_cardFecha.Text = client.VencimientoDeTarjeta;
+            txt_nation.Text = client.Nacionalidad;
+            txt_nombre.Text = client.Nombre;
+            txt_identif.Text = client.ID;
+            dtp_nacimDate.Value = FormUtils.StringToDateTime(client.FechaDeNacimiento);
+            if (client.Sexo.Equals("Masculino"))
+            {
+                cmb_sexo.SelectedIndex = 1;
+            }
+            else
+            {
+                cmb_sexo.SelectedIndex = 0;
+            }
+            if (client.VIP == "Si")
+            {
+                rbtn_vip.Checked = true;
+                rbtn_noVip.Checked = false;
+            }
+            else
+            {
+                rbtn_vip.Checked = false;
+                rbtn_noVip.Checked = true;
+            }
+            if (client.FormaDePago == "Efectivo")
+            {
+                txt_noTarjeta.ReadOnly = true;
+                txt_noTarjeta.Text = "0000000000000000";
+                txt_cardFecha.ReadOnly = true;
+                txt_cardFecha.Text = "no necesario";
+                txt_cvc.ReadOnly = false;
+                txt_cvc.Text = "no necesario";
+                cmb_formaPay.SelectedIndex = 0;
+            }
+            else
+            {
+                cmb_formaPay.SelectedIndex = 1;
+            }
+
+            
+        }
 
         private void ExitForm(object sender, FormClosedEventArgs e)
         {
@@ -32,7 +84,7 @@ namespace View
         private void ExitForm()
         {
             Hide();
-            principalMenu.Show();
+            search.Show();
         }
 
         private void CancelForm(object sender, EventArgs e)
@@ -40,11 +92,11 @@ namespace View
             ExitForm();
         }
 
-        private void RegisterNewClient(object sender, EventArgs e)
+        private void ModificationClient(object sender, EventArgs e)
         {
             if (FormUtils.IsRequiredFieldsValidInGroupBox(this))
             {
-                RegisterNewClient();
+                ModificationClient();
                 return;
             }
 
@@ -55,7 +107,7 @@ namespace View
 
         }
 
-        public void RegisterNewClient()
+        public void ModificationClient()
         {
             Client client = new Client();
 
@@ -77,12 +129,11 @@ namespace View
             client.VencimientoDeTarjeta = txt_cardFecha.Text;
             client.CVC = txt_cvc.Text;
 
-
-            registerController.NewClient(client);
             MessageBox.Show(
-                "Registro Exitoso", 
+                "Modificación Exitosa", 
                 "Estado del registro"
                 );
+            clientModificationController.ModificationClient(client, list, index);
             ExitForm();
             
         }
@@ -135,7 +186,7 @@ namespace View
 
         private void Register_Load(object sender, EventArgs e)
         {
-            cmb_sexo.SelectedIndex = 0;
+
         }
 
         private void FormaDePago(object sender, EventArgs e)
@@ -152,11 +203,8 @@ namespace View
             if (cmb_formaPay.SelectedIndex == 1)
             {
                 txt_noTarjeta.ReadOnly = false;
-                txt_noTarjeta.Text = "";
                 txt_cardFecha.ReadOnly = false;
-                txt_cardFecha.Text = "";
                 txt_cvc.ReadOnly = false;
-                txt_cvc.Text = "";
             }
         }
 

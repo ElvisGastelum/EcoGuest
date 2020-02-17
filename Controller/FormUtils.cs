@@ -64,13 +64,24 @@ namespace Controller
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("{0} / {1} / {2}", 
+            sb.AppendFormat("{0}/{1}/{2}", 
                 dateTime.Day.ToString(), 
                 dateTime.Month.ToString(),
                 dateTime.Year.ToString()
             );
                 
             return sb.ToString();
+        }
+
+        public static DateTime StringToDateTime(string date)
+        {
+            var dateSplit = date.Split(new []{ '/' }, StringSplitOptions.None);
+            int year = int.Parse(dateSplit[2]);
+            int month = int.Parse(dateSplit[1]);
+            int day = int.Parse(dateSplit[0]);
+
+            DateTime dateTime = new DateTime(year, month, day);
+            return dateTime;
         }
     }
 }
