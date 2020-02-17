@@ -8,7 +8,6 @@ namespace Model
     public abstract class Client
     {
         public bool VIP { get; set; }
-        public string NumeroDeCliente { get; set; }
         public string Nombre { get; set; }
         public string ID { get; set; }
         public string FechaDeNacimiento { get; set; }
@@ -20,10 +19,19 @@ namespace Model
         public string VencimientoDeTarjeta { get; set; }
         public string CVC { get; set; }
 
-        public Client(bool vip, string numeroDeCliente, string nombre, string id, string fechaDeNacimiento, string sexo, string nacionalidad, int celular, string formaDePago, int numeroDeTarjeta, string vencimientoDeTarjeta, string cvc)
+        public Client(bool vip,
+            string nombre,
+            string id,
+            string fechaDeNacimiento,
+            string sexo,
+            string nacionalidad,
+            int celular,
+            string formaDePago,
+            int numeroDeTarjeta,
+            string vencimientoDeTarjeta,
+            string cvc)
         {
             VIP = vip;
-            NumeroDeCliente = numeroDeCliente;
             Nombre = nombre;
             ID = id;
             FechaDeNacimiento = fechaDeNacimiento;

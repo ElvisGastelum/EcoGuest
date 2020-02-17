@@ -91,6 +91,7 @@
             this.txt_nation.Name = "txt_nation";
             this.txt_nation.Size = new System.Drawing.Size(199, 20);
             this.txt_nation.TabIndex = 56;
+            this.txt_nation.Tag = "Required";
             // 
             // txt_identif
             // 
@@ -98,6 +99,7 @@
             this.txt_identif.Name = "txt_identif";
             this.txt_identif.Size = new System.Drawing.Size(199, 20);
             this.txt_identif.TabIndex = 54;
+            this.txt_identif.Tag = "Required";
             // 
             // txt_nombre
             // 
@@ -105,6 +107,7 @@
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(199, 20);
             this.txt_nombre.TabIndex = 53;
+            this.txt_nombre.Tag = "Required";
             // 
             // label9
             // 
@@ -184,6 +187,7 @@
             this.txt_noTarjeta.Name = "txt_noTarjeta";
             this.txt_noTarjeta.Size = new System.Drawing.Size(200, 20);
             this.txt_noTarjeta.TabIndex = 72;
+            this.txt_noTarjeta.Tag = "Required";
             // 
             // label11
             // 
@@ -203,6 +207,7 @@
             this.txt_formaPay.Name = "txt_formaPay";
             this.txt_formaPay.Size = new System.Drawing.Size(200, 20);
             this.txt_formaPay.TabIndex = 70;
+            this.txt_formaPay.Tag = "Required";
             // 
             // label15
             // 
@@ -251,6 +256,7 @@
             this.txt_celular.Name = "txt_celular";
             this.txt_celular.Size = new System.Drawing.Size(200, 20);
             this.txt_celular.TabIndex = 77;
+            this.txt_celular.Tag = "Required";
             // 
             // label5
             // 
@@ -292,6 +298,8 @@
             this.txt_cvc.Name = "txt_cvc";
             this.txt_cvc.Size = new System.Drawing.Size(200, 20);
             this.txt_cvc.TabIndex = 83;
+            this.txt_cvc.Tag = "Required";
+            this.txt_cvc.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -311,6 +319,7 @@
             this.txt_cardFecha.Name = "txt_cardFecha";
             this.txt_cardFecha.Size = new System.Drawing.Size(200, 20);
             this.txt_cardFecha.TabIndex = 81;
+            this.txt_cardFecha.Tag = "Required";
             // 
             // label12
             // 

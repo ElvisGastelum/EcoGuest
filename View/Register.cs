@@ -13,6 +13,7 @@ namespace View
 {
     public partial class Register : Form
     {
+        private RegisterController registerController = new RegisterController();
         private PrincipalMenu principalMenu;
         public Register(PrincipalMenu principalMenu)
         {
@@ -38,7 +39,33 @@ namespace View
 
         private void RegisterNewClient(object sender, EventArgs e)
         {
-            Console.WriteLine(FormUtils.DateToString(dtp_nacimDate.Value));
+            if (FormUtils.IsRequiredFieldsValidInGroupBox(this))
+            {
+                RegisterNewClient();
+            }
+            else
+            {
+                Console.WriteLine(":(");
+            }
+            
+        }
+
+        public void RegisterNewClient()
+        {
+            if (registerController.NewClient())
+            {
+                MessageBox.Show(
+                    "Registro Exitoso",
+                    "Estado del registro"
+                );
+                ExitForm();
+                return;
+            }
+
+            MessageBox.Show(
+                "Registro incorrecto",
+                "Estado del registro"
+            );
         }
     }
 }

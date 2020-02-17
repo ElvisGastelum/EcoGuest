@@ -7,7 +7,7 @@ namespace Model
     [Serializable]
     public class SuiteRoom: Room
     {
-        public SuiteRoom(List<IClient> listaDeClientes)
+        public SuiteRoom(List<Client> listaDeClientes)
         {
             Tipo = "Suite";
             Estado = "Libre";

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Controller
 {
@@ -28,6 +29,35 @@ namespace Controller
         {
             return form.Controls.OfType<TextBox>().Any(x => x.Tag.ToString() == "Required"
                                                             && string.IsNullOrEmpty(x.Text));
+        }
+
+        public static bool IsRequiredFieldsValidInGroupBox(Form form)
+        {
+            bool resultOfFirstLevel = form.Controls.OfType<GroupBox>().Any(x => x.Controls
+                .OfType<TextBox>()
+                .Any(y =>
+                {
+                    return y.Tag.ToString() == "Required"
+                                  && string.IsNullOrEmpty(y.Text);
+                }));
+
+            bool resultOfSecondLevel = form.Controls.OfType<GroupBox>().Any(x =>
+            {
+                return x.Controls.OfType<GroupBox>()
+                    .Any( y =>
+                {
+                    return y.Controls.OfType<TextBox>()
+                        .Any(z => z.Tag.ToString() == "Required" 
+                                  && string.IsNullOrEmpty(z.Text));
+                });
+            });
+
+            if (resultOfFirstLevel == false && resultOfSecondLevel == false)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public static string DateToString(DateTime dateTime)
